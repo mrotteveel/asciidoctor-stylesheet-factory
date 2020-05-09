@@ -1,0 +1,62 @@
+// Started as a copy of asciidoc.scss
+@import "settings/firebird";
+@import "components/firebird";
+@import "components/awesome-icons";
+
+dt, th.tableblock, td.content, div.footnote {
+  // NOTE text-rendering is already set for p
+  text-rendering: optimizeLegibility;
+}
+
+// QUESTION should we tighten letter spacing of text in footnotes?
+h1, h2, p, td.content, span.alt {
+  letter-spacing: -0.01em;
+}
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, h7 code {
+    font-size: inherit;
+}
+
+// Make h7 have same styles as h6
+h7 {
+    @extend h6;
+}
+
+p, td.content, div.footnote {
+  strong {
+    // NOTE needs to apply anywhere we have bold prose
+    letter-spacing: -0.005em;
+  }
+}
+
+// NOTE include blockquote for when it doesn't have a nested p
+p, blockquote, dt, td.content, span.alt {
+  font-size: 1.0625rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+// restore font size in sidebar block and regular table cells
+.sidebarblock p, .sidebarblock dt, .sidebarblock td.content, p.tableblock {
+  font-size: 1em;
+}
+
+.exampleblock > .content {
+  // white
+  //background-color: #fff;
+  //border-color: $panel-border-color;
+  //@include single-box-shadow($panel-border-color, 0, 1px, 2px);
+
+  // light yellow
+  background-color: #fffef7; // from rgb(252,247,227), analogous to #f8f8f7
+  border-color: $panel-border-color;
+  @include single-box-shadow($panel-border-color, 0, 1px, 4px);
+}
+
+div.sect1, div.sect2, div.sect3, div.sect4, div.sect5, div.sect6 {
+    margin-top: 2em;
+}
+
+@import "components/print";
