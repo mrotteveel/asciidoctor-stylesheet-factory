@@ -60,12 +60,14 @@ div.sect1, div.sect2, div.sect3, div.sect4, div.sect5, div.sect6 {
     margin-top: 2em;
 }
 
-div.preheader > table {
+div#preheader {
+  > div.fb-docindex table {
+    background-color: $panel-bg;
+    width: 100%;
+  }
+  table {
     border: none;
-    &.fb-docindex {
-        background-color: $panel-bg;
-        width: 100%;
-    }
+  }
 }
 
 #tocbot{
