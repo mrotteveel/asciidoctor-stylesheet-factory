@@ -1,4 +1,5 @@
 // Started as a copy of asciidoc.scss
+//@import "fonts/asciidoctor";
 @import "settings/firebird";
 @import "components/firebird";
 @import "components/awesome-icons";
@@ -57,6 +58,65 @@ p {
 
 div.sect1, div.sect2, div.sect3, div.sect4, div.sect5, div.sect6 {
     margin-top: 2em;
+}
+
+div.preheader > table {
+    border: none;
+    &.fb-docindex {
+        background-color: $panel-bg;
+        width: 100%;
+    }
+}
+
+#tocbot{
+  overflow-y: auto;
+  > .toc-list {
+    overflow: hidden;
+    position: relative;
+    li {
+      list-style: none
+    }
+  }
+  .toc-list {
+    margin: 0;
+    padding-left: 10px
+  }
+  @media screen {
+    a.toc-link {
+      height: 100%
+    }
+    .is-collapsible {
+      max-height: 1000px;
+      overflow: hidden;
+      transition: all 300ms ease-in-out}
+    .is-collapsed {
+      max-height: 0
+    }
+    .is-position-fixed {
+      position: fixed !important;
+      top:0
+    }
+    .is-active-link {
+      font-weight: 700
+    }
+    .toc-link::before {
+      background-color: #EEE;
+      content: ' ';
+      display: inline-block;
+      height: inherit;
+      left: 0;
+      margin-top: -1px;
+      position: absolute;
+      width: 2px}
+    .is-active-link::before {
+      background-color: #54BC4B
+    }
+  }
+  @media print{
+    #tocbot a.toc-link.node-name--H4 { 
+      display: none 
+    }
+  }
 }
 
 @import "components/print";
