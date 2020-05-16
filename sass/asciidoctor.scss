@@ -43,7 +43,7 @@ p {
   // light yellow
   background-color: #fffef7; // from rgb(252,247,227), analogous to #f8f8f7
   border-color: $panel-border-color;
-  @include single-box-shadow($panel-border-color, 0, 1px, 4px);
+  @include single-box-shadow(0, 1px, 4px, $color: $panel-border-color);
 }
 
 @import "components/print";

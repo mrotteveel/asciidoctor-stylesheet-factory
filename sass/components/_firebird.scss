@@ -29,6 +29,8 @@ $subheader-text-rendering: $header-text-rendering !default;
 $footer-bg: $body-font-color !default;
 $footer-font-color: invert($body-font-color) !default;
 
+$column-gutter: emCalc(40);
+
 // NOTE: border-collapse: separate allows us to control border sides independently
 
 body {

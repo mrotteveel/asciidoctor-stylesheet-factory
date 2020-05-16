@@ -30,11 +30,6 @@ p, td.content, div.footnote {
   }
 }
 
-// NOTE include blockquote for when it doesn't have a nested p
-p, blockquote, dt, td.content, span.alt {
-  font-size: 1.0625rem;
-}
-
 p {
   margin-bottom: 1.25rem;
 }
@@ -53,7 +48,7 @@ p {
   // light yellow
   background-color: #fffef7; // from rgb(252,247,227), analogous to #f8f8f7
   border-color: $panel-border-color;
-  @include single-box-shadow($panel-border-color, 0, 1px, 4px);
+  @include single-box-shadow(0, 1px, 4px, $color: $panel-border-color);
 }
 
 div.sect1, div.sect2, div.sect3, div.sect4, div.sect5, div.sect6 {

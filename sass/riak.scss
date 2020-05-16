@@ -29,7 +29,7 @@ body {
 .listingblock {
   pre {
     background: $pre-bg;
-    @include single-box-shadow(#AEB9B6, 0, 1px, 4px, $inset:inset);
+    @include single-box-shadow(0, 1px, 4px, $color: #AEB9B6, $inset:inset);
     @include radius(5px);
     //font-size: 80%;
   }
@@ -117,7 +117,7 @@ p > em {
 
 table.tableblock.grid-all {
   @include radius(0);
-  @include single-box-shadow(#999, 0, 1px, 3px);
+  @include single-box-shadow(0, 1px, 3px, $color:#999);
 }
 
 #footer {
