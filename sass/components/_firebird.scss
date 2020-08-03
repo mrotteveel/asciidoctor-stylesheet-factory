@@ -1172,6 +1172,10 @@ dl dd:last-child > :last-child {
   margin-bottom: 0;
 }
 
+dl dt code {
+  font-weight: bold;
+}
+
 ol > li p,
 ul > li p,
 ul dd,
@@ -1235,6 +1239,9 @@ ul.inline > li {
 .unstyled dl dt {
   font-weight: normal;
   font-style: normal;
+  code {
+    font-weight: normal;
+  }
 }
 
 @mixin ordered-list-type($class, $type) {
